@@ -13,9 +13,11 @@ function ChoresTable({ chores }: { chores: Chore[] }) {
     <table className="table min-w-full text-gray-900">
       <thead className="bg-gray-200 text-gray-700 rounded-lg text-sm">
         <tr>
-          <th scope="col" className="px-3 py-3 text-start rounded-tl-lg">Chore</th>
-          <th scope="col" className="px-3 py-3 text-center">Done</th>
-          <th scope="col" className="px-3 py-3 text-start rounded-tr-lg"><div className="sr-only">Edit</div></th>
+          <th scope="col" className="px-3 py-3 text-start rounded-tl-lg w-1/2">Chore</th>
+          <th scope="col" className="px-3 py-3 text-center w-1/4">Done</th>
+          <th scope="col" className="px-3 py-3 text-start rounded-tr-lg w-1/4">
+            <div className="sr-only">Edit</div>
+          </th>
         </tr>
       </thead>
       <tbody className="bg-white/50">

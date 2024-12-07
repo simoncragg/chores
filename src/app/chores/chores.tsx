@@ -1,4 +1,4 @@
-import ChoresTable from "@/app/ui/chores/chores-table";
+import ChoresTable from "@/app/ui/chores/table";
 import { fetchChoresAsync } from "@/app/lib/data";
 
 export default async function Chores() {

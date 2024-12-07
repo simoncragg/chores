@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Chores from "./chores";
-import { ChoresTableSkeleton } from "./ui/skeletons";
+import { ChoresTableSkeleton } from "@/app/ui/chores/skeletons";
 
 export default async function Home() {
 

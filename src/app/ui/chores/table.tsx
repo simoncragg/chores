@@ -24,7 +24,7 @@ function ChoresTable({ chores }: { chores: Chore[] }) {
         {chores?.map(chore => (
           <tr
             key={chore.id}
-            className="w-full border-b py-3 text-sm last-of-type:border-none [&:last-child>td:first-child]:rounded-b-lg [&:last-child>td:last-child]:rounded-br-lg"
+            className="w-full border-b py-3 text-sm last-of-type:border-none [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
           >
             <td className="whitespace-nowrap px-3 py-3">
               {chore.name}

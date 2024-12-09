@@ -1,3 +1,5 @@
+import { CHORES_PER_PAGE } from "@/app/lib/data";
+
 export function ChoresTableSkeleton() {
   return (
     <table className="table min-w-full text-gray-900 animate-pulse">
@@ -9,7 +11,7 @@ export function ChoresTableSkeleton() {
         </tr>
       </thead>
       <tbody className="bg-white/50">
-        {Array.from({ length: 2 }).map((_, i) => (
+        {Array.from({ length: CHORES_PER_PAGE }).map((_, i) => (
           <tr
             key={i}
             className="w-full border-b py-3 text-sm last-of-type:border-none [&:last-child>td:first-child]:rounded-b-lg [&:last-child>td:last-child]:rounded-br-lg"

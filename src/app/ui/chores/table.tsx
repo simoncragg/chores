@@ -10,7 +10,7 @@ function ChoresTable({ chores }: { chores: Chore[] }) {
   };
 
   return (
-    <table className="table min-w-full text-gray-900">
+    <table className="table min-w-full text-gray-900 text-start">
       <thead className="bg-gray-200 text-gray-700 rounded-lg text-sm">
         <tr>
           <th scope="col" className="px-3 py-3 text-start rounded-tl-lg w-1/2">Chore</th>

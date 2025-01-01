@@ -17,8 +17,7 @@ async function Page(props: {
   const choresPromise = fetchChoresAsync(currentPage);
 
   return (
-    <section key={uuidv4()} className="flex flex-col w-full text-center gap-8">
-      <h2>CHORES</h2>
+    <section key={uuidv4()} className="flex flex-col items-start w-full gap-4">
       <Suspense fallback={<ChoresTableSkeleton />}>
         <Await promise={choresPromise}>
           {(chores) => <ChoresTable chores={chores} />}

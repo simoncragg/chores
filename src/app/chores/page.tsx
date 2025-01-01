@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Suspense } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -18,14 +19,27 @@ async function Page(props: {
 
   return (
     <section key={uuidv4()} className="flex flex-col items-start w-full gap-4">
+
+      <div className="flex justify-between items-center w-full">
+        <h2>Your Chores</h2>
+        <Link 
+          href="/chores/create" 
+          className="px-3 py-1.5 text-sm font-medium text-white bg-deepTeal border border-deepTeal border-b-4 border-b-teal-900 rounded-md hover:bg-deepTeal/95 active:border-b-[1px] active:mt-0.5"
+        >
+          Add Chore
+        </Link>
+      </div>
+
       <Suspense fallback={<ChoresTableSkeleton />}>
         <Await promise={choresPromise}>
           {(chores) => <ChoresTable chores={chores} />}
         </Await>
       </Suspense>
+
       <div className="mt-5 flex w-full justify-center">
         <PaginationBar totalPages={totalPages} />
       </div>
+
     </section>
   );
 }
